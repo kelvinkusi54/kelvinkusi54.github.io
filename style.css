@@ -21,7 +21,7 @@ p
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	background: url(bg.jpg);
+	background: url(notebook.jpg);
 }
 .banner .content
 {
@@ -104,6 +104,7 @@ header .navigation li a
 	text-decoration: none;
 	color: #fff;
 	font-weight: 300;
+	font-size: 20px;
 }
 header.sticky .navigation li a 
 {
@@ -243,7 +244,7 @@ section
 }
 .contact
 {
-	background: url(bg1.jpg);
+	background: url();
 	background-size: cover;
 }
 .contactForm
@@ -267,7 +268,166 @@ section
 	width: 100%;
 	margin-bottom: 20px;
 }
-.contactForm .inputBox input
+.contactForm .inputBox input,
+.contactForm .inputBox textarea
 {
+	width: 100%;
+	border: 1px solid #555;
+	padding: 10px;
+	color: #111;
+	outline: none;
+	font-size: 16px;
+	font-weight: 300;
+	resize: none;
+}
+.contactForm .inputBox input[type="submit"]
+{
+	font-size: 1em;
+	color: #fff;
+	background: #ff0157;
+	display: inline-block;
+	text-transform: uppercase;
+	text-decoration: none;
+	letter-spacing: 2px;
+	transition: 0.5s;
+	max-width: 100px;
+	font-weight: 500;
+	border: none;
+	cursor: pointer;
+}
+.contactForm .inputBox input[type="submit"]:hover
+{
+	letter-spacing: 4px;
+}
+
+.copyrightText
+{
+	padding: 8px 40px;
+	border-top: 1px solid rgba(0,0,0,0.1);
+	text-align: center;
+}
+.copyrightText p
+{
+	color: #333;
+}
+
+
+
+@media (max-width: 991px)
+{
+	header,
+	header.sticky
+	{
+		padding: 10px 20px;
+	}
+	header .navigation
+	{
+		display: none;
+	}
+	header .navigation.active
+	{
+		width: 100%;
+		height: calc(100% - 68px);
+		position: fixed;
+		top: 68px;
+		left: 0;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		background: #fff;
+	}
+	header .navigation li
+	{
+		margin-left: 0;
+	}
+	header .navigation li a 
+	{
+		color: #111;
+		font-size: 1.6em;
+	}
+	.menuToggle
+	{
+		position: relative;
+		width: 40px;
+		height: 40px;
+		background: url(menu.png);
+		background-size: 30px;
+		background-repeat: no-repeat;
+		background-position: center;
+		cursor: pointer;
+	}
+	.menuToggle.active
+	{
+		background: url(close.png);
+		background-size: 25px;
+		background-repeat: no-repeat;
+		background-position: center;
+	}
+	header.sticky .menuToggle
+	{
+		filter: invert(1);
+	}
+	section
+	{
+		padding: 20px;
+	}
+	.banner .content h2
+	{
+		font-size: 3em;
+		color: #fff;
+	}
+	.row
+	{
+		flex-direction: column;
+	}
+	.row .col50
+	{
+		position: relative;
+		width: 100%;
+	}
+	.row .col50 .imgBx
+	{
+		height: 300px;
+		margin-top: 20px;
+	}
+	.menu .content
+	{
+		margin-top: 20px;
+	}
+	.menu .content .box
+	{
+		margin: 10px;
+	}
+	.menu .content .box .imgBx
+	{
+		height: 260px;
+	}
+	.title
+	{
+		text-align: center;
+	}
+	.titleText
+	{
+		font-size: 1.8em;
+		line-height: 1.5em;
+		margin-bottom: 15px;
+		font-weight: 300;
+	}
 	
+	.contactForm
+	{
+		padding: 35px 40px;
+		margin-top: 20px;
+		margin-bottom: 30px;
+	}
+}
+
+@media (max-width: 480px)
+{
+	.banner .content h2
+	{
+		font-size: 2.2em;
+		color: #fff;
+	}
 }

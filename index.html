@@ -3,25 +3,25 @@
 <head>
 	<meta charset="utf-8">
 	<metta name="viewport" content="device-width, initial-scale=1.0">
-	<title>My Personal Website</title>
+	<title>GlobTech | Official Website</title>
 	<link rel="stylesheet" type="text/css" href="style.css">
+	<link href="favicon.ico" rel="shortcut icon" type="image/x-icon">
 </head>
 <body>
 	<header>
-		<a href="#" class="logo">Food<span>.</span></a>
+		<a href="#" class="logo">GlobTech<span>.</span></a>
+		<div class="menuToggle" onclick="toggleMenu();"></div>
 		<ul class="navigation">
-			<li><a href="#banner">Home</a></li>
-			<li><a href="#about">About</a></li>
-			<li><a href="#project">Project</a></li>
-			<li><a href="#service">Service</a></li>
-			<li><a href="#contact">Contact</a></li>
+			<li><a href="#banner" onclick="toggleMenu();">Home</a></li>
+			<li><a href="#about" onclick="toggleMenu();">About</a></li>
+			<li><a href="#service" onclick="toggleMenu();">Services</a></li>
+			<li><a href="#contact" onclick="toggleMenu();">Contact</a></li>
 		</ul>
 	</header>
 	<section class="banner" id="banner">
 		<div class="content">
 			<h2>Always Choose Good</h2>
 			<p>Losjs shdshdvhsvhsd sdvshdvsgdvd  sdvsgsgdsdvgsdv sdgyvdsdsdvsbd dsvvdvsgvtsdvtsdv svdvstdvstdvstdvsd sttsdstdftsfdtsfsfdtsftsfdtsfdfts sdstddftdfstfstdf dsjnknbsfshsbkd</p>
-			<a href="#" class="btn">Menu</a>
 		</div>
 	</section>
 	<section class="about" id="about">
@@ -145,22 +145,30 @@
 			<h2 class="titleText"><span>C</span>ontact</h2>
 			<p>Lorem ipsum dolor sit amet, consectetur adipsicing elit</p>
 		</div>
+
+
 		<div class="contactForm">
 			<h3>Send Message</h3>
+			<form action="contactForm.php" method="POST">
 			<div class="inputBox">
-				<input type="text" placeholder="Name">
+				<input type="name" placeholder="Name" required="Name">
 			</div>
 			<div class="inputBox">
-				<input type="text" placeholder="Email">
+				<input type="email" placeholder="Email" required="Email">
 			</div>
 			<div class="inputBox">
-				<textarea placeholder="Name"></textarea>
+				<textarea placeholder="Message" rows="5" required="Message"></textarea>
 			</div>
 			<div class="inputBox">
 				<input type="submit" value="Send">
 			</div>
+			</form>
 		</div>
 	</section>
+
+	<div class="copyrightText">
+		<p>Copyright © 2022. Powered by Global Technology Inc. All Rights Reserved.</p>
+	</div>
 
 
 
@@ -170,6 +178,13 @@
 		  const header = document.querySelector('header');
 		  header.classList.toggle("sticky", window.scrollY > 0);
 		});
+
+		function toggleMenu(){
+			const menuToggle = document.querySelector('.menuToggle');
+			const navigation = document.querySelector('.navigation');
+			menuToggle.classList.toggle('active');
+			navigation.classList.toggle('active');
+		}
 	</script>
 </body>
 </html>
