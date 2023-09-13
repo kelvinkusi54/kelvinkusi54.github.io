@@ -423,14 +423,14 @@ section{
 		position: relative;
 		width:40px;
 		height: 40px;
-		background: url(images/menu.png);
+		background: url(images/menu.PNG);
 		background-size: 30px;
 		background-repeat: no-repeat;
 		background-position: center;
 		cursor: pointer;
 	}
 	.menuToggle.active{
-		background: url(images/close.png);
+		background: url(images/close.PNG);
 		background-size: 20px;
 		background-repeat: no-repeat;
 		background-position: center;
